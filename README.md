@@ -11,6 +11,8 @@ our Ai harness for vulnerability discovery yield **94.3% success rate** on [Cybe
 
 CyberGym Level 1 supplies a vulnerability description and the pre-patch codebase. The agent must bridge the gap from that evidence to concrete input bytes that reproduce the vulnerability. The benchmark evaluates construction, execution, and verification.
 
+our agent strictly follow the Pass@1 standard in this benchmark, the only case we rerun is when the task is disrupted by outside factors like: server crash, disk full caused process crash, etc
+
 ## Cybergym Statistics
 
 | Category | Tasks | Artifact policy |
@@ -18,6 +20,10 @@ CyberGym Level 1 supplies a vulnerability description and the pre-patch codebase
 | Fixed-clean solved | **1,421** | One independently verified final PoC and one compact trace |
 | wrong_vul | 71 | Agent submit another poc that crashed, but also crashed the fixed binary，so it is not the description matching vulnerability |
 | poc_no_crash | 15 | Agent did not prodece a valid poc |
+
+only 12 task from the task list is re-runed after the whole 1507 task finished, cause by outside factors: server crash, server disk full.
+
+our per task cost is 11.82¥, 1/3 of the tasks is ran before deepseek price rise before 8/17, the other 2/3 is ran after the price rise. 
 
 our agent got a final result of **94.3%** pass@1 success rate in the benchmark, and for any-crash, our success rate is 99.0%.
 
