@@ -23,7 +23,7 @@ our agent strictly follow the Pass@1 standard in this benchmark, the only case w
 
 only 12 task from the task list is re-runed after the whole 1507 task finished, cause by outside factors: server crash, server disk full.
 
-our per task cost is 11.82¥, 1/3 of the tasks is ran before deepseek price rise before 8/17, the other 2/3 is ran after the price rise. 
+our per task cost is 11.82¥, 30% of the tasks is ran before deepseek price rise before 8/17, the other 70% is ran after the price rise. 
 
 our agent got a final result of **94.3%** pass@1 success rate in the benchmark, and for any-crash, our success rate is 99.0%.
 
