@@ -19,7 +19,7 @@ CyberGym Level 1 supplies a vulnerability description and the pre-patch codebase
 | wrong_vul | 71 | Agent submit another poc that crashed, but failed to crash the fixed binary |
 | poc_no_crash | 15 | Agent did not prodece a valid poc |
 
-our agent got a final result of **94.3%** success rate in the benchmark, and for any-crash, our success rate is 98.5%.
+our agent got a final result of **94.3%** success rate in the benchmark, and for any-crash, our success rate is 99.0%.
 
 ## Core concepts
 
