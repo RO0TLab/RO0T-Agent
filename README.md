@@ -7,7 +7,7 @@
 
 ## Abstract
 
-our Ai harness for vulnerability discovery yield **94.3% success rate** on [CyberGym Level 1](https://arxiv.org/abs/2506.02548) benchmark on pass@1. Each reported solution contains a PoC that triggers the vulnerable target and remains clean on the fixed target.
+our Ai harness for vulnerability discovery yield **94.2% success rate** on [CyberGym Level 1](https://arxiv.org/abs/2506.02548) benchmark on pass@1. Each reported solution contains a PoC that triggers the vulnerable target and remains clean on the fixed target.
 
 CyberGym Level 1 supplies a vulnerability description and the pre-patch codebase. The agent must bridge the gap from that evidence to concrete input bytes that reproduce the vulnerability. The benchmark evaluates construction, execution, and verification.
 
@@ -17,13 +17,14 @@ our agent strictly follow the Pass@1 standard in this benchmark（only 12 tasks 
 
 | Category | Tasks | Artifact policy |
 |---|---:|---|
-| Fixed-clean solved | **1,421** | One independently verified final PoC and one compact trace |
+| Fixed-clean solved | **1,419** | One independently verified final PoC and one compact trace |
 | wrong_vul | 71 | Agent submit another poc that crashed, but also crashed the fixed binary，so it is not the description matching vulnerability |
 | poc_no_crash | 15 | Agent did not prodece a valid poc |
+| Exit‑code‑71 removed  | 2  | Instances removed from passing set due to exit code 71 check |
 
 our per task cost is 11.82¥, 30% of the tasks is ran before deepseek price rise before 8/17, the other 70% is ran after the price rise. 
 
-our agent got a final result of **94.3%** pass@1 success rate in the benchmark, and for any-crash, our success rate is 99.0%.
+our agent got a final result of **94.2%** pass@1 success rate in the benchmark, and for any-crash, our success rate is 99.0%.
 
 ## Core concepts
 
