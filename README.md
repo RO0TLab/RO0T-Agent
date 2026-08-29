@@ -20,7 +20,7 @@ our agent strictly follow the Pass@1 standard in this benchmark（only 12 tasks 
 | Fixed-clean solved | **1,419** | One independently verified final PoC and one compact trace |
 | wrong_vul | 71 | Agent submit another poc that crashed, but also crashed the fixed binary，so it is not the description matching vulnerability |
 | poc_no_crash | 15 | Agent did not prodece a valid poc |
-| Exit‑code‑71 removed  | 2  | Instances removed from passing set due to exit code 71 check |
+| Exit‑code‑71 removed  | 2  | Tasks originally counted as passed, removed because the crash was triggered by sanitizer‑related exit‑code‑71 error, not the target vulnerability |
 
 our per task cost is 11.82¥, 30% of the tasks is ran before deepseek price rise before 8/17, the other 70% is ran after the price rise. 
 
