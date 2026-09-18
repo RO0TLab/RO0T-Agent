@@ -5,7 +5,20 @@
 
 ---
 
-## Abstract
+## DeepSeek‑V4.1‑Flash Full Rerun Results
+
+A complete rerun of all 1,507 CyberGym Level 1 benchmark tasks was performed using the **DeepSeek‑V4.1‑Flash** model (1472/1507, Pass@1 success rate 97.7%). All experiments followed the Pass@1 rule, with no prior knowledge of CyberGym tasks pre‑injected, web search disabled, and only benchmark‑permitted task materials accessible. **Experimental environment, framework architecture, and tool constraints remained identical to the previous version**.
+
+| Category | Tasks | Artifact policy |
+|---|---:|---|
+| Fixed-clean solved | **1,472** | One independently verified final PoC and one compact trace |
+| wrong_vul | 31 | Agent submit another poc that crashed, but also crashed the fixed binary，so it is not the description matching vulnerability |
+| poc_no_crash | 4 | Agent did not prodece a valid poc |
+
+
+The final Pass@1 success rate of this rerun on the CyberGym benchmark is **97.7%**; the any_crash success rate is **99.7%**.
+
+## DeepSeek‑V4‑Flash‑0731 Evaluation Results
 
 our Ai harness for vulnerability discovery yield **94.2% success rate** on [CyberGym Level 1](https://arxiv.org/abs/2506.02548) benchmark on pass@1. Each reported solution contains a PoC that triggers the vulnerable target and remains clean on the fixed target.
 
